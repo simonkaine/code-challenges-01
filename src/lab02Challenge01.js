@@ -32,3 +32,7 @@ export function ofAge(arr){
       return people;
   })
 }
+
+export function leastToGreatest(arr){
+    return arr.sort((a, b) => a - b); 
+}
