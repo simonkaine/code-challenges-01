@@ -17,3 +17,18 @@ export function evensOnly(arr) {
 export function fiveCharactersOrFewerOnly(arr){
   return arr.filter(string => string.length <= 5)
 }
+
+export function peopleWhoBelongToTheIlluminati(arr){
+  return arr.filter((name) => {
+      if(name.member === true) {
+          return name;
+      }
+  })
+}
+
+export function ofAge(arr){
+  return arr.filter((people) => {
+      if(people.age > 18)
+      return people;
+  })
+}
