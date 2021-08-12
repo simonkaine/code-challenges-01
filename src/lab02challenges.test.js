@@ -6,6 +6,7 @@ import { ofAge } from './lab02Challenge01';
 import { leastToGreatest } from './lab02Challenge01';
 import { greatestToLeast } from './lab02Challenge01';
 import { lengthSort } from './lab02Challenge01';
+import { alphabetical } from './lab02Challenge01';
 
 test('Five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -72,4 +73,10 @@ test('Shortest to longest', () => {
     const input = ['dog', 'wolf', 'by', 'family', 'eaten']; // arrange
     const output = lengthSort(input); // act
     expect(output).toEqual(['by', 'dog', 'wolf', 'eaten', 'family']); // assert
+});
+
+test('Alphabetical', () => {
+    const input = ['dog', 'wolf', 'by', 'family', 'eaten']; // arrange
+    const output = alphabetical(input); // act
+    expect(output).toEqual(['by', 'dog', 'eaten', 'family', 'wolf']); // assert
 });
