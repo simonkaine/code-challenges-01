@@ -5,6 +5,7 @@ import { peopleWhoBelongToTheIlluminati } from './lab02Challenge01';
 import { ofAge } from './lab02Challenge01';
 import { leastToGreatest } from './lab02Challenge01';
 import { greatestToLeast } from './lab02Challenge01';
+import { lengthSort } from './lab02Challenge01';
 
 test('Five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -65,4 +66,10 @@ test('Greatest to least', () => {
     const input = [1, 3, 5, 2, 90, 20]; // arrange
     const output = greatestToLeast(input); // act
     expect(output).toEqual([90, 20, 5, 3, 2, 1]); // assert
+});
+
+test('Shortest to longest', () => {
+    const input = ['dog', 'wolf', 'by', 'family', 'eaten']; // arrange
+    const output = lengthSort(input); // act
+    expect(output).toEqual(['by', 'dog', 'wolf', 'eaten', 'family']); // assert
 });
