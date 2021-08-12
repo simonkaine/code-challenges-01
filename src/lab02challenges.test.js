@@ -4,6 +4,7 @@ import { fiveCharactersOrFewerOnly } from './lab02Challenge01';
 import { peopleWhoBelongToTheIlluminati } from './lab02Challenge01';
 import { ofAge } from './lab02Challenge01';
 import { leastToGreatest } from './lab02Challenge01';
+import { greatestToLeast } from './lab02Challenge01';
 
 test('Five and greater only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -58,4 +59,10 @@ test('Least to greatest', () => {
     const input = [1, 3, 5, 2, 90, 20]; // arrange
     const output = leastToGreatest(input); // act
     expect(output).toEqual([1, 2, 3, 5, 20, 90]); // assert
-  });
+});
+
+test('Greatest to least', () => {
+    const input = [1, 3, 5, 2, 90, 20]; // arrange
+    const output = greatestToLeast(input); // act
+    expect(output).toEqual([90, 20, 5, 3, 2, 1]); // assert
+});
