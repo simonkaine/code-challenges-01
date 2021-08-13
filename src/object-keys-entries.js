@@ -18,3 +18,7 @@ export function getArrayOfKeysAndValues(obj){
     const newArray = Object.entries(obj);
     return newArray;
 }
+
+export function sortedArraysByValuesLength(obj) {
+    return Object.entries(obj).sort((a, b) => b[1].length - a[1].length);
+}
