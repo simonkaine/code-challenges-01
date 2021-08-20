@@ -33,13 +33,13 @@ export function totalCharacters(arr) {
 // } 
 
 // This was my last attempt at this @problem 04.. I couldn't progress past this point.
-export function hasChildrenEntries(arr, character) {
-    Object.entries(arr).forEach((arr) => {
-        if (arr.name === character && arr.children === []) {
-            return true;
-        } 
-        if (arr.name === character && !arr.children === []) {
-        return false;
-        }
-    })
-} 
+// export function hasChildrenEntries(arr, character) {
+//     Object.entries(arr).forEach((arr) => {
+//         if (arr.name === character && arr.children === []) {
+//             return true;
+//         } 
+//         if (arr.name === character && !arr.children === []) {
+//         return false;
+//         }
+//     })
+// } 
