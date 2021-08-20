@@ -1,4 +1,4 @@
-import { getHouses, totalCharacters, updateNumbers } from './more-object-keys-entries.js';
+import { getHouses, hasChildrenEntries, totalCharacters, updateNumbers } from './more-object-keys-entries.js';
 
 test('it gets the names of the houses', () => {
   const characters = [
@@ -103,3 +103,58 @@ test('House Size', () => {
   const output = totalCharacters(characters); //act
   expect(output).toEqual(26); //assert
 });
+
+test('Has Children Entries', () => {
+  const characters = [
+    {
+      name: 'Eddard',
+      spouse: 'Catelyn',
+      children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+      house: 'Stark'
+    },
+    {
+      name: 'Jon A.',
+      spouse: 'Lysa',
+      children: ['Robin'],
+      house: 'Arryn'
+    },
+    {
+      name: 'Cersei',
+      spouse: 'Robert',
+      children: ['Joffrey', 'Myrcella', 'Tommen'],
+      house: 'Lannister'
+    },
+    {
+      name: 'Daenarys',
+      spouse: 'Khal Drogo',
+      children: ['Drogon', 'Rhaegal', 'Viserion'],
+      house: 'Targaryen'
+    },
+    {
+      name: 'Mace',
+      spouse: 'Alerie',
+      children: ['Margaery', 'Loras'],
+      house: 'Tyrell'
+    },
+    {
+      name: 'Euron',
+      spouse: null,
+      children: [],
+      house: 'Greyjoy'
+    },
+    {
+      name: 'Jon S.',
+      spouse: null,
+      children: [],
+      house: 'Snow'
+    }
+  ]; //arrange; //arrange
+  const character1 = "Eddard"; //act
+  const output1 = hasChildrenEntries(characters, character1); //act
+  expect(output1).toEqual(true); //assert
+
+  const character2 = "Euron"; //act
+  const output2 = hasChildrenEntries(characters, character2); //act
+  expect(output2).toEqual(false); //assert
+});
+
